@@ -95,3 +95,10 @@ Các màu thương hiệu chính nằm ở đầu `styles.css` trong `:root`.
 ## V4 — Original Site UI lock
 
 Các khu vực Hero, Câu chuyện nghề nghiệp, Vì sao chọn Mitalab và Hỏi đáp & Liên hệ được khóa theo giao diện Site gốc/reference đã duyệt. Bản static giữ sticky navigation, smooth scroll, scroll reveal, hover states, accordion FAQ, job filters, modal JD và interactive recruitment journey.
+
+
+## V5 — Nguồn dữ liệu thật (07/09/2026)
+- Danh sách việc làm được đối chiếu thủ công từ https://www.mitalab.com/tuyen-dung tại thời điểm 07/09/2026. Đây là snapshot tĩnh, không tự đồng bộ sau khi deploy GitHub Pages.
+- Câu chuyện Mitalab dùng bài viết công khai trên mitalab.com; benchmark dùng Roche, Abbott và B. Braun.
+- Logo mark dùng SVG local theo nhận diện kim cương nhiều tam giác được Mitalab công bố chính thức; lưu local để tránh phụ thuộc hotlink.
+- UI/animation từ V4 được giữ nguyên; CSS V5 chỉ bổ sung block benchmark và source-link.

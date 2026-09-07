@@ -417,3 +417,21 @@ a,button,input,select{font:inherit}.container{width:min(var(--max),calc(100% - 4
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+
+
+/* V5 content-source additions — additive only; original Site UI/effects remain unchanged. */
+.benchmark-block{margin-top:44px;padding-top:32px;border-top:1px solid var(--line)}
+.benchmark-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:20px}
+.benchmark-head h3{font-size:clamp(1.35rem,2.1vw,1.8rem);margin:6px 0 0;color:var(--navy)}
+.benchmark-head p{margin:0;color:var(--muted)}
+.benchmark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.benchmark-card{display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff;text-decoration:none;color:var(--navy);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.benchmark-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(20,52,90,.10);border-color:#9bc7e7}
+.benchmark-card span{font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--blue)}
+.benchmark-card strong{font-size:1.02rem;line-height:1.35}
+.benchmark-card p{margin:0;color:var(--muted);font-size:.91rem;line-height:1.55}
+.benchmark-card b{margin-top:auto;color:var(--blue);font-size:.86rem}
+.why-ref{display:inline-block;margin-top:14px;color:var(--blue);font-weight:800;font-size:.86rem;text-decoration:none}
+.why-ref:hover{text-decoration:underline}
+.story-cover-title{max-width:78%;}
+@media(max-width:820px){.benchmark-head{grid-template-columns:1fr}.benchmark-grid{grid-template-columns:1fr}.benchmark-block{margin-top:30px}.hero-family-list button{min-height:50px}}
