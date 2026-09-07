@@ -31,56 +31,51 @@
   </header>
 
   <main id="main">
-    <section class="hero section-pad">
+    <section class="hero original-hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <div class="eyebrow">CAREER HUB 2027 · BẢN MẪU TƯƠNG TÁC</div>
-          <h1>Tìm công việc phù hợp.<br /><span>Hiểu rõ hành trình tại Mitalab.</span></h1>
-          <p>Khám phá những vai trò kết nối thiết bị, dữ liệu và con người để góp phần nâng tầm chất lượng xét nghiệm tại Việt Nam.</p>
+          <h1 id="hero-title">Khám phá cơ hội<br />nghề nghiệp.<br /><span>Phát triển cùng<br />Mitalab.</span></h1>
+          <p>Khám phá những vai trò kết nối thiết bị, dữ liệu và con người để góp<br class="hero-desktop-break" /> phần nâng tầm chất lượng xét nghiệm tại Việt Nam.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#jobs">Tìm vị trí phù hợp</a>
-            <a class="btn btn-secondary" href="#journey">Xem quy trình tuyển dụng</a>
+            <a class="hero-text-link" href="#journey">Xem quy trình tuyển dụng <span aria-hidden="true">→</span></a>
           </div>
-          <p class="microcopy">Bản mẫu để pitching · không nhận hồ sơ thật.</p>
+          <div class="hero-stats" aria-label="Thông tin Mitalab">
+            <div><strong>25+</strong><span>Năm kinh nghiệm</span></div>
+            <div><strong>300+</strong><span>Bệnh viện đối tác</span></div>
+            <div><strong>04</strong><span>Địa bàn hiện diện</span></div>
+          </div>
         </div>
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="orb orb-1"></div><div class="orb orb-2"></div>
-          <div class="hero-card hc-1"><span>TECH</span><b>Thiết bị & Ứng dụng</b></div>
-          <div class="hero-card hc-2"><span>DATA</span><b>LIS / IT / Data</b></div>
-          <div class="hero-card hc-3"><span>COMMERCIAL</span><b>Kinh doanh & Vận hành</b></div>
-          <div class="signal-line s1"></div><div class="signal-line s2"></div>
-        </div>
-      </div>
-      <div class="container stats reveal">
-        <div><strong>25+</strong><span>Năm kinh nghiệm</span></div>
-        <div><strong>300+</strong><span>Bệnh viện đối tác</span></div>
-        <div><strong>04</strong><span>Địa bàn hiện diện</span></div>
-        <div><strong>06</strong><span>Vị trí minh họa</span></div>
-      </div>
-    </section>
 
-    <section class="quick-search section-pad-sm">
-      <div class="container reveal">
-        <div class="search-shell">
-          <div>
-            <span class="eyebrow">KHÁM PHÁ</span>
-            <h2>Bạn đang tìm cơ hội nào?</h2>
+        <aside class="hero-job-panel reveal" aria-label="Khám phá vị trí minh họa">
+          <div class="hero-job-panel-head">
+            <div class="hero-panel-title"><span class="hero-live-dot" aria-hidden="true"></span><strong>Vị trí minh họa</strong></div>
+            <strong class="hero-job-total">06</strong>
           </div>
-          <form id="quickSearch" class="quick-search-form">
-            <label class="sr-only" for="quickKeyword">Tìm kiếm</label>
-            <input id="quickKeyword" type="search" placeholder="Tìm theo vị trí, kỹ năng..." />
-            <button class="btn btn-primary" type="submit">Tìm</button>
+
+          <form id="quickSearch" class="hero-search-form">
+            <label for="quickKeyword">Bạn đang tìm kiếm công việc nào?</label>
+            <div class="hero-search-row">
+              <span class="hero-search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+              </span>
+              <input id="quickKeyword" type="search" placeholder="Ví dụ: kỹ sư, LIS, kinh doanh..." />
+              <button type="submit">Tìm</button>
+            </div>
           </form>
-          <div class="quick-pills" aria-label="Nhóm nghề">
-            <button data-family-jump="tech">Thiết bị & Ứng dụng <b>02</b></button>
-            <button data-family-jump="data">LIS / IT / Data <b>02</b></button>
-            <button data-family-jump="commercial">Kinh doanh & Vận hành <b>02</b></button>
+
+          <div class="hero-family-list" aria-label="Nhóm nghề">
+            <button type="button" data-family-jump="tech"><span>Thiết bị &amp; Ứng dụng</span><b>02</b></button>
+            <button type="button" data-family-jump="data"><span>LIS / IT / Data</span><b>02</b></button>
+            <button type="button" data-family-jump="commercial"><span>Kinh doanh &amp; Vận hành</span><b>02</b></button>
           </div>
-        </div>
-        <div class="status-banner">
-          <div><b>Ứng tuyển rõ ràng, biết bước tiếp theo.</b><span>Xác nhận ngay sau khi hoàn tất hồ sơ.</span></div>
-          <button class="text-btn" data-open="scopeDialog">Xem ranh giới dự án →</button>
-        </div>
+
+          <div class="hero-panel-assurance">
+            <span class="hero-check" aria-hidden="true">✓</span>
+            <div><strong>Ứng tuyển dễ dàng, quy trình rõ ràng.</strong><span>Nhận xác nhận và hướng dẫn sau khi gửi hồ sơ.</span></div>
+          </div>
+        </aside>
       </div>
     </section>
 
