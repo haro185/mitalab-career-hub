@@ -91,3 +91,7 @@ Khi đưa thành website tuyển dụng production cần nối:
 - Danh sách job, bộ lọc, quy trình tuyển dụng, FAQ: `script.js`
 
 Các màu thương hiệu chính nằm ở đầu `styles.css` trong `:root`.
+
+## V4 — Original Site UI lock
+
+Các khu vực Hero, Câu chuyện nghề nghiệp, Vì sao chọn Mitalab và Hỏi đáp & Liên hệ được khóa theo giao diện Site gốc/reference đã duyệt. Bản static giữ sticky navigation, smooth scroll, scroll reveal, hover states, accordion FAQ, job filters, modal JD và interactive recruitment journey.

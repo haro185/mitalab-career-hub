@@ -18,11 +18,11 @@ const journey = [
 ];
 
 const faqs = [
-  ['Tôi sẽ trải qua bao nhiêu vòng tuyển dụng?','Tùy vị trí, quy trình có thể gồm trao đổi cùng HR, trao đổi chuyên môn và bước ra quyết định. Số vòng, hình thức và thời lượng dự kiến nên được ghi rõ trong Job Detail.'],
-  ['Sau khi nộp hồ sơ, khi nào tôi nhận được phản hồi?','Bản mẫu đề xuất xác nhận ngay sau khi nhận hồ sơ và cập nhật sau sàng lọc trong vòng 03 ngày làm việc. Thời gian chính thức cần được TA và quản lý tuyển dụng phê duyệt.'],
-  ['Tôi có thể ứng tuyển nhiều vị trí không?','Có. Tuy nhiên, nên ưu tiên những vị trí phù hợp nhất với kinh nghiệm và định hướng của bạn để quá trình trao đổi hiệu quả hơn.'],
-  ['Mitalab sử dụng dữ liệu ứng viên như thế nào?','Bản GitHub này không gửi hoặc lưu dữ liệu. Khi triển khai thật, thông báo dữ liệu và cơ chế đồng ý cần được công bố rõ tại điểm ứng tuyển/Talent Community.'],
-  ['Làm sao nhận biết thông tin tuyển dụng chính thức?','Ưu tiên các kênh chính thức của Mitalab và xác minh khi cần. Mitalab không thu phí ứng viên trong bất kỳ vòng tuyển dụng nào.']
+  ['Tôi sẽ trải qua bao nhiêu vòng tuyển dụng?','Tùy vị trí, quy trình mẫu gồm sàng lọc, trao đổi chuyên môn và quyết định. Số vòng, hình thức và thời lượng dự kiến phải được ghi ngay trong Job Detail.'],
+  ['Sau khi nộp hồ sơ, khi nào tôi nhận được phản hồi?','Thời gian phản hồi tùy theo vị trí và từng giai đoạn tuyển dụng. Khi triển khai chính thức, mốc phản hồi sẽ được thông báo rõ để ứng viên chủ động theo dõi.'],
+  ['Tôi có thể ứng tuyển nhiều vị trí không?','Bạn có thể ứng tuyển nhiều vị trí nếu kinh nghiệm và định hướng phù hợp. Đội ngũ tuyển dụng có thể trao đổi thêm để xác định cơ hội phù hợp nhất.'],
+  ['Mitalab sử dụng dữ liệu ứng viên như thế nào?','Dữ liệu ứng viên chỉ được sử dụng cho các mục đích tuyển dụng và kết nối cơ hội nghề nghiệp theo nội dung bạn đã đồng ý. Thông báo dữ liệu chi tiết sẽ được công bố tại điểm thu thập thông tin.'],
+  ['Làm sao nhận biết thông tin tuyển dụng chính thức?','Hãy ưu tiên các kênh tuyển dụng chính thức của Mitalab và MitalabWorks. Mitalab không thu phí ứng viên trong bất kỳ vòng tuyển dụng nào.']
 ];
 
 const storyData = {
@@ -58,8 +58,14 @@ function renderJourney(active=0){
 }
 
 function renderFAQ(){
-  $('#faqList').innerHTML=faqs.map((f,i)=>`<div class="faq-item ${i===0?'open':''}"><button class="faq-q" aria-expanded="${i===0}"><span>${f[0]}</span><span>+</span></button><div class="faq-a">${f[1]}</div></div>`).join('');
-  $$('.faq-q').forEach(q=>q.addEventListener('click',()=>{const item=q.closest('.faq-item');item.classList.toggle('open');q.setAttribute('aria-expanded',item.classList.contains('open'));}));
+  $('#faqList').innerHTML=faqs.map((f,i)=>`<div class="faq-item ${i===0?'open':''}"><button class="faq-q" aria-expanded="${i===0}"><span>${f[0]}</span><span class="faq-symbol" aria-hidden="true">${i===0?'−':'+'}</span></button><div class="faq-a"><div class="faq-a-inner">${f[1]}</div></div></div>`).join('');
+  $$('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+    const item=q.closest('.faq-item');
+    item.classList.toggle('open');
+    const open=item.classList.contains('open');
+    q.setAttribute('aria-expanded',open);
+    $('.faq-symbol',q).textContent=open?'−':'+';
+  }));
 }
 
 function initDialogs(){
