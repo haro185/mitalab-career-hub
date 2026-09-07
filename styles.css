@@ -435,3 +435,278 @@ a,button,input,select{font:inherit}.container{width:min(var(--max),calc(100% - 4
 .why-ref:hover{text-decoration:underline}
 .story-cover-title{max-width:78%;}
 @media(max-width:820px){.benchmark-head{grid-template-columns:1fr}.benchmark-grid{grid-template-columns:1fr}.benchmark-block{margin-top:30px}.hero-family-list button{min-height:50px}}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  background: #081d33;
+  color: #d5deea;
+  padding-top: 52px;
+  font-size: 14px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 80px;
+  padding-bottom: 46px;
+}
+
+
+/* =========================================================
+   CỘT TRÁI
+========================================================= */
+
+.footer-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  display: inline-flex;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 11px 14px;
+  text-decoration: none;
+}
+
+.footer-logo img {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+.footer-tagline {
+  margin: 17px 0 26px;
+  color: #8fa1b6;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+/* SOCIAL */
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1b3047;
+  border-radius: 12px;
+
+  color: #aab8c8;
+  text-decoration: none;
+
+  font-size: 26px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-socials a:hover {
+  background: #087fc4;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   THÔNG TIN LIÊN HỆ
+========================================================= */
+
+.footer-contact h3 {
+  margin: 2px 0 26px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+.footer-office-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  column-gap: 75px;
+  row-gap: 36px;
+}
+
+.footer-office h4 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.footer-office p {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin: 6px 0;
+
+  color: #9aacc0;
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.footer-office i {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #0299e6;
+
+  font-size: 18px;
+}
+
+.footer-office a {
+  color: #9aacc0;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footer-office a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   EMAIL / WEBSITE
+========================================================= */
+
+.footer-extra {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-top: 18px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-extra a {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  width: fit-content;
+
+  color: #b4c0cf;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footer-extra i {
+  color: #00a0ea;
+  font-size: 19px;
+}
+
+.footer-extra a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  padding: 22px 0;
+
+  color: #65778e;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .footer-main {
+    grid-template-columns: 280px 1fr;
+    gap: 45px;
+  }
+
+  .footer-office-grid {
+    column-gap: 35px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    padding-top: 40px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .footer-office-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-tagline {
+    margin-bottom: 20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .footer-logo img {
+    width: 120px;
+  }
+
+  .footer-socials a {
+    width: 44px;
+    height: 44px;
+    font-size: 23px;
+  }
+
+}
